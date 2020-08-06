@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://www.springframework.org/schema/data/couchbase"
+             xmlns:couchbase="http://www.springframework.org/schema/data/couchbase"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/data/couchbase
+        http://www.springframework.org/schema/data/couchbase/spring-couchbase.xsd">
+
+    <couchbase:cluster>
+        <couchbase:node>localhost</couchbase:node>
+    </couchbase:cluster>
+
+    <couchbase:clusterInfo login="baeldung" password=""/>
+
+    <couchbase:bucket bucketName="baeldung" bucketPassword=""/>
+
+    <couchbase:repositories base-package="com.baeldung.spring.data.couchbase"/>
+</beans:beans>o
